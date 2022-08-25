@@ -4,18 +4,17 @@ body {
     width: auto;
     height: auto;
     text-align: center;
+    font-weight: bold;
 
 }
 
 h1 {
     color: goldenrod;
-    text-align: center;
     font-weight: bold;
 }
 
 p {
     color: white;
-    text-align: center;
 }
 #message-el {
     font-style: italic;

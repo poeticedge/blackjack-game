@@ -1,24 +1,25 @@
-let playerEl = {
+let player = {
     name: "Megan",
-    chips = 200
+    chips: 200
 }
+
 let cards = [] // array
 let sum = 0
-let hasBlackJack = false
+let hasBlackJack = false //boolean
 let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
-let sumEl = document.querySelector(".sum-el")
-let cardsEl = document.querySelector (".cards-el")
+let sumEl = document.querySelector("#sum-el")
+let cardsEl = document.querySelector ("#cards-el")
 let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips //rendering the object declared above
 
-function getRandomCard (){//function declaration 
-    let randomNumber = Math.floor( Math.random ()*13 ) + 1
+function getRandomCard () {//function declaration 
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
         return 10
-    } else if (randomNumber===1) {
+    } else if (randomNumber === 1) {
         return 11
     } else {
         return randomNumber
@@ -30,16 +31,16 @@ function startGame () {
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
-    sun = firstCard + secondCard
+    sum = firstCard + secondCard
     renderGame( )
 }
 
-function renderGame() { // code to be executed  
+function renderGame() {
     cardsEl.textContent = "Cards: "
-    for (let i = 0; i = card < cards.length; i ++ 1) {
-        cards.El.textContent += cards[i] + " " 
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
     }
-
+    
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
@@ -51,9 +52,9 @@ function renderGame() { // code to be executed
         isAlive = false
     }
     messageEl.textContent = message
-  }
+}
 
-function newCard (){
+function newCard() {
     if (isAlive === true && hasBlackJack === false){
         let card = getRandomCard()
         sum += card
@@ -62,4 +63,3 @@ function newCard (){
     }
 
 }
-
