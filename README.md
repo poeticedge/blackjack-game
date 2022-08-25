@@ -7,3 +7,8 @@ Topics include:
   -Functions
   -Operators > Math.random, Math.floor etc
   -Booleans and for loops
+  -if/else statements
+  -conditionals
+  -logical operators
+  -for loops
+  -return statements
